@@ -12,7 +12,8 @@ source citations, and improvement tasks inside a workspace.
 - Answers preserve the observed response and its citations.
 - Reports aggregate observations for a defined period and comparison scope.
 - Issues track agreed actions and the evidence motivating them.
-- Domains identify sources and may require ownership verification.
+- Tracked domains identify customer websites and may require ownership verification.
+- Source domains and cited URLs identify evidence; they do not establish ownership.
 
 ## Choose a workflow
 

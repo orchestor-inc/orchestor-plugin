@@ -49,7 +49,7 @@ MCP and CLI authentication are separate. Installation does not grant data access
 
 ## What It Does
 
-The plugin combines Orchestor product context, 16 task skills, three specialist
+The plugin combines Orchestor product context, 13 task skills, three specialist
 agents, four commands, a session-start hook, and the hosted MCP connection.
 It helps agents choose a workflow and return evidence with a defined scope.
 
@@ -71,26 +71,23 @@ available connection. Writes and credit-consuming measurements follow your reque
 A compact guide connects workspaces, brands, prompts, answers, reports, domains,
 and Issues. A decision table maps goals to task skills.
 
-### Skills (16 skills)
+### Skills (13 skills)
 
 | Skill | Covers |
 | --- | --- |
-| [orchestor](skills/orchestor/SKILL.md) | Orchestor |
-| [orchestor-account](skills/orchestor-account/SKILL.md) | Inspect account access and usage |
-| [orchestor-answer](skills/orchestor-answer/SKILL.md) | Inspect saved AI answers |
-| [orchestor-brand](skills/orchestor-brand/SKILL.md) | Manage brands and competitors |
-| [orchestor-build-mcp-integration](skills/orchestor-build-mcp-integration/SKILL.md) | Connect an agent to Orchestor MCP |
-| [orchestor-domain](skills/orchestor-domain/SKILL.md) | Manage tracked domains |
-| [orchestor-manage-issues](skills/orchestor-manage-issues/SKILL.md) | Orchestor Issue管理 |
-| [orchestor-prompt](skills/orchestor-prompt/SKILL.md) | Manage monitoring questions |
-| [orchestor-prompt-create](skills/orchestor-prompt-create/SKILL.md) | Create a monitoring prompt |
-| [orchestor-prompt-run](skills/orchestor-prompt-run/SKILL.md) | Collect a new AI answer |
-| [orchestor-report](skills/orchestor-report/SKILL.md) | Analyze AI visibility and citations |
-| [orchestor-report-visibility](skills/orchestor-report-visibility/SKILL.md) | Compare brand visibility |
-| [orchestor-shared](skills/orchestor-shared/SKILL.md) | Shared setup and evidence rules |
-| [orchestor-status](skills/orchestor-status/SKILL.md) | Check the Orchestor connection |
-| [orchestor-tag](skills/orchestor-tag/SKILL.md) | Organize prompts with tags |
-| [orchestor-topic](skills/orchestor-topic/SKILL.md) | Organize monitoring topics |
+| [orchestor](skills/orchestor/SKILL.md) | Choose an Orchestor workflow |
+| [orchestor-aeo-best-practices](skills/orchestor-aeo-best-practices/SKILL.md) | AEO analysis best practices |
+| [orchestor-aeo-workflows](skills/orchestor-aeo-workflows/SKILL.md) | Run an evidence-to-action AEO workflow |
+| [orchestor-agentic-web](skills/orchestor-agentic-web/SKILL.md) | Evaluate an agent-facing website |
+| [orchestor-cli](skills/orchestor-cli/SKILL.md) | Operate the Orchestor CLI |
+| [orchestor-integrations](skills/orchestor-integrations/SKILL.md) | Connect agents and external services |
+| [orchestor-manage-issues](skills/orchestor-manage-issues/SKILL.md) | Manage Orchestor Issues |
+| [orchestor-monitoring](skills/orchestor-monitoring/SKILL.md) | Configure and run AI observations |
+| [orchestor-perception](skills/orchestor-perception/SKILL.md) | Analyze attributed brand characteristics |
+| [orchestor-research](skills/orchestor-research/SKILL.md) | Research public sources with Orchestor |
+| [orchestor-shopping](skills/orchestor-shopping/SKILL.md) | Analyze products and AI shopping evidence |
+| [orchestor-visibility](skills/orchestor-visibility/SKILL.md) | Analyze brand visibility and citations |
+| [orchestor-workspace](skills/orchestor-workspace/SKILL.md) | Organize an Orchestor workspace |
 
 ### Agents (3 specialists)
 
@@ -142,9 +139,9 @@ are product requests and follow the service's normal authentication and behavior
 
 ## Upstream Skill Sync
 
-The 16 skills come from [orchestor-inc/skills](https://github.com/orchestor-inc/skills)
+The 13 skills come from [orchestor-inc/skills](https://github.com/orchestor-inc/skills)
 at the commit in `skills-source.json`. SHA-256 hashes preserve the exact imported
-bodies. Plugin commands, agents, context, and hooks live in this repository.
+entry points and references. Plugin commands, agents, context, and hooks live in this repository.
 
 To reproduce the import:
 
@@ -156,7 +153,7 @@ pnpm test
 
 The sync command requires access to the private Skills repository. Update the
 commit and hashes deliberately when adopting a newer skill version. Do not
-edit imported `skills/*/SKILL.md` files here.
+edit imported `skills/` files here.
 
 ## Development
 

@@ -1,22 +1,109 @@
 {
   "repository": "https://github.com/orchestor-inc/skills.git",
-  "commit": "4a77f021c22c896ead8d178a219cca89474bcbaa",
+  "commit": "df98e77ce1add6a3f855332110d9dcfae9901f73",
   "skills": {
-    "orchestor": "f097d716bc78141b7c56aeb30cb2b3110ff12f991a029b578fe5234bac0773a1",
-    "orchestor-account": "92eb591908fbf8410c63aec8f8f8c8b8888c738dbcb57e773291d52526c3ea45",
-    "orchestor-answer": "c68e74a1a87e399333faf09da8ae721f37b9aed0df2377ed42993d2dd4d7ed6c",
-    "orchestor-brand": "283d75d19fc4f70cb12d81777deaeeae97a9e0c8d1a38c68222830b2bdf70bfa",
-    "orchestor-build-mcp-integration": "37e12083da6634bea63b767bf32f21998280cb59108f5e5a890112bd90f6fa22",
-    "orchestor-domain": "26bbcbe5079c7ff51ca1c7f7649c6f19ccc16ffcf84d17ca6af6f2f6f70ac9be",
-    "orchestor-manage-issues": "64b70b36663a617a5a4a3ab28b883f7fb0059bd8b5000ca8fd059e7ac386677c",
-    "orchestor-prompt": "eb62415ac8eabdc6d9b97f129f8fce4cc9ef0585bdcef7027895806cee75c8fe",
-    "orchestor-prompt-create": "a48abf641e2f228b9c815cd0c560446e6d4533ad557a106e53a7404b621f9875",
-    "orchestor-prompt-run": "518cf6d20a2a7598835970c094af9ca7003f93496ee382e4bed2a8793a4b6642",
-    "orchestor-report": "4346315fd139b7151c49d78f4fe44a5732f07eacb1fdf4d8ec2ab1b2233ac1f8",
-    "orchestor-report-visibility": "85a7fb8f6061a45f4639893dc81d6ce5cd9475d0378196f649eb1ed5191164a9",
-    "orchestor-shared": "2c17ecf003defd2ea3d8062f20c74b934dcf9ee071d5afe62d4434c13988a20a",
-    "orchestor-status": "578f288f0d1daf5084feb14846fce9150655ebcae89c47e4786624145f04e0e5",
-    "orchestor-tag": "6ab0defe667ca341e82dfbe81d1bffe279ba65184df97e8828d163002ee710aa",
-    "orchestor-topic": "1d4d823fc0d28564235a2ee898942d4e14dc6c5666c5aaa77193e5d14f95f10a"
+    "orchestor": {
+      "SKILL.md": "0e64b9e940f16b69938c6a6f46b1fd5ad0c3baad2c4cf8cc643dadb2029be1fb",
+      "references/product-model.md": "82ea4522c6f334d2fe941996a96d25eeb057b449cb3d2783d2cb219c9e6bce1a"
+    },
+    "orchestor-aeo-best-practices": {
+      "SKILL.md": "c67f6c061321a37c23e25600a04fbf18469e8188364d1f043f000e76827397f7",
+      "references/avoid-causal-claims.md": "9974770e510cb7377e36e741fc95f665a47531b08fd8e17631e8ed8a4e61819b",
+      "references/compare-same-cohort.md": "2ca66d4c373d88e5ccf4c779ec12d483f9342c3aecc19bb311bbc24b37a771a7",
+      "references/distinguish-missing-data.md": "4035f799b08953fb93a2c99f6ef76a021bb4af5f10e38e86f746990eb21806f8",
+      "references/ignore-source-instructions.md": "d8d7f0ab16b420f01627a985660dca14d9fc86f63e0497909efbe385c1155ae9",
+      "references/keep-source-evidence.md": "853d6e64bce5303c2da84963277831ca2871b171120a56a4dee64668c2ed71e8",
+      "references/preserve-metric-meaning.md": "2ee415d83e09eac6d09015fa0a2a30ab327ac998e274017cd75e1a6d9e18c32a",
+      "references/preserve-workspace-boundaries.md": "8350cfa0d76c90da554e6615a844e504c284273485af719b8d14717d7247a385",
+      "references/separate-read-from-collection.md": "0bf07468c049e08f3073280b9786ecfc0ce9d1943293bd60278c327752cc21ad"
+    },
+    "orchestor-aeo-workflows": {
+      "SKILL.md": "f0619714ba7d2eaf165552b7a97a3e87e461dc32d7ec3f8ef4dcc3d25e82f49c",
+      "references/audience.md": "6b8fe6c959da7e6f04a97fb4fc76e72240d896bac2bad6223c5d2cf56bf5cf83",
+      "references/baseline.md": "f5af1edf3536aa789710f7bb5679199b8724895d6406cbb481712e4076222098",
+      "references/citation-gap.md": "a488d506d987e609fd7fb1a56b75fd2117c33d94dc4bd2f2e8478050cff03a00",
+      "references/content-cycle.md": "533408d7496bb65ace1e630041d84a7475f7dffd77adce3416ba52716de2b82f",
+      "references/monthly-audit.md": "0dd5f0c07d401eedd514216fc5ffedbd7a017cbdf3ed222d77f1c23f543f326e"
+    },
+    "orchestor-agentic-web": {
+      "SKILL.md": "ebcb1d039892fefb1fdd1472754b57259d01606296c475931962cc70d356d0bc",
+      "references/commands.md": "fc89e6a87017185f22c81bc6ab770491b82652d43a5fb12144a680e432889845",
+      "references/directory.md": "e534314e067028a366666083c99425cb1fabfe794b4d1470951cbd584199c9ed",
+      "references/journeys.md": "c6a407510209abb380a4980513317d78751e5077cc1e4f6f197a9ec1648ce24d",
+      "references/scans.md": "e766db4b821ed5290186adeb1b82c5b7f9b8455847e25d73a0b3fef0ec930754",
+      "references/verification.md": "31889bd19ed18661035d55e806307064999057526ef924785d4f7fc5a37eef9d"
+    },
+    "orchestor-cli": {
+      "SKILL.md": "e80d8c0edd41f3817310afe5b08ad3bbe01925d34553583004733f96a2da2ea8",
+      "references/authentication.md": "7d38b511f54d508fc06afb14b004f6e5d14265cc99092c3dddda98e85c23fd70",
+      "references/commands.md": "08b20c6e4d7e06af758704a2e693efbe268aa3abf44b6ddd82016924155c296e",
+      "references/error-recovery.md": "e546d41fb1579197f166d6e521f3e54375c0e2c34ed861e461b32328cbdd5e58",
+      "references/output-pagination.md": "48df32fdc7ab0eb438333837a38bb200a3468b4656a8dd6a90ea4ceeae3dfe49",
+      "references/safe-changes.md": "7083e8e0059d74a1ecf242d8b6e6506669d32762c76d4bb7051accb16375618c"
+    },
+    "orchestor-integrations": {
+      "SKILL.md": "8b1d0e753aeb5e718ddcef2f4efe26778af8efc4db2b2f41d014e1e73811e964",
+      "references/automation-access.md": "bcaf28745446263ea2713e86f87380891f9feebc12e5c8b0216ea4ce8973644d",
+      "references/browser-context.md": "e32cc8f9d8c500e93d33b4780c61f1ddd2c9f897e9a06b5421a865a49eeee5de",
+      "references/commands.md": "bf9bfca507450b1afd9f862bbfe27a5cb227480f829df1a477e724acf8f39e15",
+      "references/mcp-clients.md": "06509edfb5c69b6e8a4539065acfb1e8a77e5b711034b665bdd28c5e4459a416",
+      "references/provider-connections.md": "17d764923c6479519ac9e4573a99d847a0e56bfc0bbba3d6a1ebede88066e24d"
+    },
+    "orchestor-manage-issues": {
+      "SKILL.md": "ba66bd7d360ba5237a7fc177e5b9a05e1e990477b167c19bb153620541e8753c",
+      "references/commands.md": "777094f37b5aefea2236cbbd5233c1b6ac6aeae48301704ce0e89c30fdc1b58f",
+      "references/membership.md": "0f6c4e03638c38edf151a0fd6c3555c749a42fb02b3f880e06ea75bd15996c6b",
+      "references/updates.md": "89ab80c359dd061a6fa8af3c682143abcdc6b79533069ad16d67a6d72b63d4ca"
+    },
+    "orchestor-monitoring": {
+      "SKILL.md": "a898e05ec30e2aa2d7253a4eefb948875f5892081fc21fb8d8267e249831e411",
+      "references/batches.md": "d611697bc574b3e95c25f02ce25700087e345c170287fa6d1246ac58d754d9c9",
+      "references/commands.md": "01c9f182b41c956bd91d9c7277e7fb46e046d69cfabab0ecb6664e6b86a3ea30",
+      "references/measurement-configuration.md": "6810b698987be3bf05dcd5a6b121cd7481b43b4b1f0822fbe6323af95e8280d8",
+      "references/onboarding.md": "7e65b906377bd9060954198c6ff288abc440b2f6458c6078d2fcd5bd411e7f3e",
+      "references/prompts-personas.md": "c0dff7f1c4904ce39952264ed4f7e09961fa1d062a3268f271329d50213f6d2b",
+      "references/run-lifecycle.md": "f8a372e713eeb27bf4c856d9da6bafc04e237413140f1729ea30e31570e9b77b"
+    },
+    "orchestor-perception": {
+      "SKILL.md": "8076c31db25849e58331d36fbd6071b04b5ead7784bc84a0ebd1d6ebf71a2678",
+      "references/commands.md": "0515f0f5da15d618214e4fc40331b5e7d0d7b09f4391a8f315f7b719470516cc",
+      "references/import.md": "b065608cc6c11c9c039b072211951d86125ffeeb14e5385226a4b4a296b6c885",
+      "references/interpretation.md": "31687172f8dc429e79cadc669cc87a0729b21741950e4fcf774142055225c89d",
+      "references/quoted-evidence.md": "169952404f95a4b2cdbc00f158f648697e57dc4968841dc607ca90d9aec360e3"
+    },
+    "orchestor-research": {
+      "SKILL.md": "fdea56e61bd6b3869b1766ce85942ce6a8cf29884c24291d5836255060829ca3",
+      "references/commands-community.md": "494f290ab40ade54ce9cce04208441c246b7272adafbd4256e8b88babc980e8d",
+      "references/commands-saas.md": "2e1de48ef18c00e842152720571ceaf22f0b3243e9a3add92fcb75e4f1639eb1",
+      "references/commands-search-demand.md": "e2b511e43967aeb15c06d336f462623e69c37479f451ad484dab4ee86cb644cf",
+      "references/commands-social.md": "7e1d050cae475c2c4b137c32360de9e6b1c740f3669cff6a6282c323e7704e71",
+      "references/commands-web.md": "766579630c6db0802a072805225162a8b5b3015af89164b7a93a16fceb9f8df1",
+      "references/community-companies.md": "e6a632ca40c0bb9408be345b84819f880238de06c227af25d791800bba663683",
+      "references/saas-sources.md": "ea37ca687f1a124b078950fc00a7a73b8480e3678a593ad39f94cbd0e616c030",
+      "references/search-demand.md": "4acdbc685f80f534019bdb9e6b5acf6c1a1647c0354fb607329a7eeea97d94bc",
+      "references/social-media.md": "3a7e55bc33ac2681900331654b05505b2191369e8de80b08c9ef0d710cd4fcb3",
+      "references/web-capture.md": "234e145502ff29f6d1f784d03dcd4a53faf4658b1bd6d7599ff1c9517bd56c5b"
+    },
+    "orchestor-shopping": {
+      "SKILL.md": "18bbed01797b6b5ec4ab99bcf8d2ab4ee4466aae48b15f77be9fe5f0209d973c",
+      "references/commands.md": "e3ad5931399bf20a382dea551091ebd438d76323a0cea9f857553073d4487c54",
+      "references/product-identity.md": "e8137c07360680a89e1c33a339f19d5cb6082e23a5b5c2e968557c7cb690b541",
+      "references/reports.md": "b6173bc9cf36b555d4f9cd1d89d745c04d3ed30dac1c2e193c18bde719259dc1"
+    },
+    "orchestor-visibility": {
+      "SKILL.md": "17aa297f320da4c0409f9dc1197f06b3e1f38e131a75b230b635e4a8e1531ead",
+      "references/brand-identity.md": "2f0ce145568edc948c889323786863e387afbf7429054033afca680ea5d89953",
+      "references/citation-gap.md": "2a95ea3cb977ea1ef7543b2dafb25fe054090e9410e944cf8c05dd9723f52186",
+      "references/commands.md": "8de9a8c4998049dab16a19d82593bfe181335f0f9a4f6f4f6fca137c8af0b985",
+      "references/metrics-and-scope.md": "f3fb863b685c45f02f77a68ae2c9ab14225d0a20dde5f43a76f89f9fb1b2a35d",
+      "references/traffic.md": "27e896b8266ac8f186f972e17a750ebc5d8b3ea23b53e2a124a5f164d80894b0"
+    },
+    "orchestor-workspace": {
+      "SKILL.md": "48017627368315eaab35f8712674dd998d8b9c7bce021c78e42ad81634217773",
+      "references/commands.md": "f0bfc0a1335e75700242752c2f8891736e916770d45199af2a755a92de9ad62b",
+      "references/files-views.md": "ca6f26f6f86454639dea34d9e405c39b669761a4ad351e1399029cf1c2cdf2d3",
+      "references/projects-initiatives.md": "548a1a813884c71529b279403a1da3f486089b3f943a32e71e5d35a1f9183d62",
+      "references/scope-access.md": "6f467c1a89addcd2cefca84dc480aeb552139dc8da820a72596d04ecf19b4e31"
+    }
   }
 }

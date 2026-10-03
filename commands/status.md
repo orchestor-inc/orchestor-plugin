@@ -13,7 +13,7 @@ Confirm the intended workspace and use only authorized data.
 
 ## Procedure
 
-Read the shared skill and orchestor-status. Run `orc --version` and `orc status`. Use `orc auth status` only if authentication needs diagnosis. Report the workspace and connection status without credential values. Do not change settings or start a measurement. If the CLI is missing, link to https://orchestor.io/docs/cli.
+Read orchestor-cli. Run `orc --version` and `orc status`. Use `orc auth status` only if authentication needs diagnosis. Report the workspace and connection status without credential values. Do not change settings or start a measurement. If the CLI is missing, link to https://orchestor.io/docs/cli.
 
 ## Return
 

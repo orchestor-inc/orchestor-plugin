@@ -7,7 +7,7 @@ The directory layout and component roles follow the primary reference:
 | Vercel element | Orchestor element |
 | --- | --- |
 | Multi-tool plugin manifests | Same manifest directories |
-| Skills | 16 pinned Orchestor skills |
+| Skills | 13 pinned Orchestor skills with 64 references |
 | Three specialist agents | Visibility, monitoring, and integration specialists |
 | Four commands | status, visibility, monitor, improve |
 | vercel.md and vercel-session.md | orchestor.md and orchestor-session.md |

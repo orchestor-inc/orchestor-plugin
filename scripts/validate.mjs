@@ -23,16 +23,20 @@ const source = json('skills-source.json');
 assert.match(source.commit, /^[a-f0-9]{40}$/);
 assert.equal(source.repository, 'https://github.com/orchestor-inc/skills.git');
 assert.deepEqual(readdirSync(resolve(root, 'skills')).sort(), Object.keys(source.skills).sort());
-for (const [name, digest] of Object.entries(source.skills)) {
+for (const [name, files] of Object.entries(source.skills)) {
   assert.match(name, /^orchestor(?:-[a-z0-9]+)*$/);
-  const path = resolve(root, 'skills', name, 'SKILL.md');
-  const body = readFileSync(path, 'utf8');
-  assert.equal(createHash('sha256').update(body).digest('hex'), digest, `Skill drift: ${name}`);
-  for (const [, link] of body.matchAll(/\]\(([^)]+)\)/g)) {
-    if (/^https?:/.test(link)) continue;
-    const target = resolve(dirname(path), link);
-    assert.ok(target.startsWith(root), `Escaping link: ${link}`);
-    assert.ok(existsSync(target), `Missing link: ${link}`);
+  assert.ok(files['SKILL.md']);
+  for (const [relativePath, digest] of Object.entries(files)) {
+    const path = resolve(root, 'skills', name, relativePath);
+    assert.ok(path.startsWith(resolve(root, 'skills', name) + '/'));
+    const body = readFileSync(path, 'utf8');
+    assert.equal(createHash('sha256').update(body).digest('hex'), digest, `Skill drift: ${name}/${relativePath}`);
+    for (const [, link] of body.matchAll(/\]\(([^)]+)\)/g)) {
+      if (/^https?:/.test(link)) continue;
+      const target = resolve(dirname(path), link.split('#')[0]);
+      assert.ok(target.startsWith(root), `Escaping link: ${link}`);
+      assert.ok(existsSync(target), `Missing link: ${link}`);
+    }
   }
 }
 for (const path of ['.mcp.json', 'mcp.json']) {

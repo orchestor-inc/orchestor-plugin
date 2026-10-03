@@ -16,7 +16,7 @@ test('session hook returns packaged context even from an unrelated project', t =
   });
   const parsed = JSON.parse(output);
   assert.equal(parsed.hookSpecificOutput.hookEventName, 'SessionStart');
-  assert.match(parsed.hookSpecificOutput.additionalContext, /orchestor-shared/);
+  assert.match(parsed.hookSpecificOutput.additionalContext, /orchestor-cli/);
   assert.match(parsed.hookSpecificOutput.additionalContext, /Installation\nis not authentication/);
   assert.ok(!output.includes('SECRET_SENTINEL'));
   assert.ok(!output.includes('PRIVATE_SENTINEL'));

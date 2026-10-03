@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "orchestor": {
+      "type": "http",
+      "url": "https://mcp.orchestor.io/mcp"
+    }
+  }
+}

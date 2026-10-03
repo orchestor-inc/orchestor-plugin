@@ -1,0 +1,30 @@
+{
+  "name": "orchestor",
+  "owner": {
+    "name": "Orchestor"
+  },
+  "plugins": [
+    {
+      "name": "orchestor",
+      "description": "Investigate AI visibility, monitor brands, and turn citation evidence into improvements.",
+      "author": {
+        "name": "Orchestor",
+        "url": "https://orchestor.io"
+      },
+      "repository": "https://github.com/orchestor-inc/orchestor-plugin",
+      "license": "UNLICENSED",
+      "keywords": [
+        "orchestor",
+        "ai-visibility",
+        "aeo",
+        "geo",
+        "brand-monitoring",
+        "mcp"
+      ],
+      "source": "./"
+    }
+  ],
+  "metadata": {
+    "description": "Orchestor workflows for AI visibility research, monitoring, and evidence-backed improvements."
+  }
+}

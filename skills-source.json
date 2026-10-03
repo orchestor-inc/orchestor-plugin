@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/orchestor-inc/skills.git",
+  "commit": "4a77f021c22c896ead8d178a219cca89474bcbaa",
+  "skills": {
+    "orchestor": "f097d716bc78141b7c56aeb30cb2b3110ff12f991a029b578fe5234bac0773a1",
+    "orchestor-account": "92eb591908fbf8410c63aec8f8f8c8b8888c738dbcb57e773291d52526c3ea45",
+    "orchestor-answer": "c68e74a1a87e399333faf09da8ae721f37b9aed0df2377ed42993d2dd4d7ed6c",
+    "orchestor-brand": "283d75d19fc4f70cb12d81777deaeeae97a9e0c8d1a38c68222830b2bdf70bfa",
+    "orchestor-build-mcp-integration": "37e12083da6634bea63b767bf32f21998280cb59108f5e5a890112bd90f6fa22",
+    "orchestor-domain": "26bbcbe5079c7ff51ca1c7f7649c6f19ccc16ffcf84d17ca6af6f2f6f70ac9be",
+    "orchestor-manage-issues": "64b70b36663a617a5a4a3ab28b883f7fb0059bd8b5000ca8fd059e7ac386677c",
+    "orchestor-prompt": "eb62415ac8eabdc6d9b97f129f8fce4cc9ef0585bdcef7027895806cee75c8fe",
+    "orchestor-prompt-create": "a48abf641e2f228b9c815cd0c560446e6d4533ad557a106e53a7404b621f9875",
+    "orchestor-prompt-run": "518cf6d20a2a7598835970c094af9ca7003f93496ee382e4bed2a8793a4b6642",
+    "orchestor-report": "4346315fd139b7151c49d78f4fe44a5732f07eacb1fdf4d8ec2ab1b2233ac1f8",
+    "orchestor-report-visibility": "85a7fb8f6061a45f4639893dc81d6ce5cd9475d0378196f649eb1ed5191164a9",
+    "orchestor-shared": "2c17ecf003defd2ea3d8062f20c74b934dcf9ee071d5afe62d4434c13988a20a",
+    "orchestor-status": "578f288f0d1daf5084feb14846fce9150655ebcae89c47e4786624145f04e0e5",
+    "orchestor-tag": "6ab0defe667ca341e82dfbe81d1bffe279ba65184df97e8828d163002ee710aa",
+    "orchestor-topic": "1d4d823fc0d28564235a2ee898942d4e14dc6c5666c5aaa77193e5d14f95f10a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "orchestor",
+  "version": "0.1.0",
+  "description": "Investigate AI visibility, monitor brands, and turn citation evidence into improvements.",
+  "author": {
+    "name": "Orchestor",
+    "url": "https://orchestor.io"
+  },
+  "repository": "https://github.com/orchestor-inc/orchestor-plugin",
+  "license": "UNLICENSED",
+  "keywords": [
+    "orchestor",
+    "ai-visibility",
+    "aeo",
+    "geo",
+    "brand-monitoring",
+    "mcp"
+  ],
+  "commands": [
+    "./commands/status.md",
+    "./commands/visibility.md",
+    "./commands/monitor.md",
+    "./commands/improve.md"
+  ],
+  "agents": [
+    "./agents/visibility-analyst.md",
+    "./agents/monitoring-specialist.md",
+    "./agents/integration-expert.md"
+  ]
+}

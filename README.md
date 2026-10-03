@@ -18,7 +18,6 @@ turning citation evidence into improvements.
 
 ### Prerequisites
 
-- Git access to this private repository.
 - An agent client listed above.
 - Node.js 24+ for installation and the session hook.
 - An Orchestor workspace and authenticated CLI for the bundled task workflows.
@@ -49,7 +48,7 @@ MCP and CLI authentication are separate. Installation does not grant data access
 
 ## What It Does
 
-The plugin combines Orchestor product context, 13 task skills, three specialist
+The plugin combines Orchestor product context, 17 resource and workflow skills, three specialist
 agents, four commands, a session-start hook, and the hosted MCP connection.
 It helps agents choose a workflow and return evidence with a defined scope.
 
@@ -71,7 +70,7 @@ available connection. Writes and credit-consuming measurements follow your reque
 A compact guide connects workspaces, brands, prompts, answers, reports, domains,
 and Issues. A decision table maps goals to task skills.
 
-### Skills (13 skills)
+### Skills
 
 | Skill | Covers |
 | --- | --- |
@@ -79,14 +78,18 @@ and Issues. A decision table maps goals to task skills.
 | [orchestor-aeo-best-practices](skills/orchestor-aeo-best-practices/SKILL.md) | AEO analysis best practices |
 | [orchestor-aeo-workflows](skills/orchestor-aeo-workflows/SKILL.md) | Run an evidence-to-action AEO workflow |
 | [orchestor-agentic-web](skills/orchestor-agentic-web/SKILL.md) | Evaluate an agent-facing website |
+| [orchestor-answers](skills/orchestor-answers/SKILL.md) | Work with saved answers |
+| [orchestor-brands](skills/orchestor-brands/SKILL.md) | Work with brands and domains |
 | [orchestor-cli](skills/orchestor-cli/SKILL.md) | Operate the Orchestor CLI |
 | [orchestor-integrations](skills/orchestor-integrations/SKILL.md) | Connect agents and external services |
 | [orchestor-manage-issues](skills/orchestor-manage-issues/SKILL.md) | Manage Orchestor Issues |
-| [orchestor-monitoring](skills/orchestor-monitoring/SKILL.md) | Configure and run AI observations |
 | [orchestor-perception](skills/orchestor-perception/SKILL.md) | Analyze attributed brand characteristics |
+| [orchestor-prompts](skills/orchestor-prompts/SKILL.md) | Work with prompts and their context |
+| [orchestor-reports](skills/orchestor-reports/SKILL.md) | Work with aggregate reports |
 | [orchestor-research](skills/orchestor-research/SKILL.md) | Research public sources with Orchestor |
+| [orchestor-runs](skills/orchestor-runs/SKILL.md) | Work with measurement runs |
 | [orchestor-shopping](skills/orchestor-shopping/SKILL.md) | Analyze products and AI shopping evidence |
-| [orchestor-visibility](skills/orchestor-visibility/SKILL.md) | Analyze brand visibility and citations |
+| [orchestor-sources](skills/orchestor-sources/SKILL.md) | Work with sources and citations |
 | [orchestor-workspace](skills/orchestor-workspace/SKILL.md) | Organize an Orchestor workspace |
 
 ### Agents (3 specialists)
@@ -137,9 +140,17 @@ namespaced commands. Check https://orchestor.io/docs/agent-setup for client setu
 This plugin does not send telemetry. Calls to Orchestor through the CLI or MCP
 are product requests and follow the service's normal authentication and behavior.
 
+## Create and improve skills
+
+For editable skill files through skills.sh, use the
+[Skills repository](https://github.com/orchestor-inc/skills). Choose one install
+route for the same skills to avoid duplicates. Follow its composition example
+and upstream skill-creator guidance. Plugin updates use the native client; in
+Claude Code run `claude plugin update orchestor@orchestor`.
+
 ## Upstream Skill Sync
 
-The 13 skills come from [orchestor-inc/skills](https://github.com/orchestor-inc/skills)
+The skills come from [orchestor-inc/skills](https://github.com/orchestor-inc/skills)
 at the commit in `skills-source.json`. SHA-256 hashes preserve the exact imported
 entry points and references. Plugin commands, agents, context, and hooks live in this repository.
 
@@ -151,7 +162,7 @@ pnpm validate
 pnpm test
 ```
 
-The sync command requires access to the private Skills repository. Update the
+Update the
 commit and hashes deliberately when adopting a newer skill version. Do not
 edit imported `skills/` files here.
 
@@ -170,4 +181,4 @@ and the components adapted to Orchestor.
 
 ## License
 
-UNLICENSED. See [LICENSE](LICENSE). This repository is private for owner review.
+[MIT](LICENSE).

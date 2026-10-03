@@ -13,7 +13,7 @@ Confirm the intended workspace and use only authorized data.
 
 ## Procedure
 
-Read orchestor-cli, orchestor-visibility. Fix the brand, date range, and competitor scope. Inspect the answers and cited sources behind observed gaps. Return at most three prioritized actions, each tied to evidence and a measurable follow-up. Distinguish observed gaps from hypotheses. Use orchestor-manage-issues only when asked to save the agreed actions as Orchestor Issues; do not create GitHub Issues.
+Read orchestor-cli, orchestor-reports. Fix the brand, date range, and competitor scope. Inspect the answers and cited sources behind observed gaps. Return at most three prioritized actions, each tied to evidence and a measurable follow-up. Distinguish observed gaps from hypotheses. Use orchestor-manage-issues only when asked to save the agreed actions as Orchestor Issues; do not create GitHub Issues.
 
 ## Return
 

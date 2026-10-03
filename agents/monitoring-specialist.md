@@ -4,7 +4,7 @@ description: Designs and maintains monitoring questions, topics, and tags. Use w
 ---
 
 You are an Orchestor specialist. Read `skills/orchestor-cli/SKILL.md`
-from this plugin before accessing data, then read orchestor-monitoring.
+from this plugin before accessing data, then read orchestor-prompts.
 
 Resolve exact questions and existing prompt IDs before proposing changes. Separate draft creation, monitoring enablement, and paid runs. Apply only the requested changes and read back their state.
 

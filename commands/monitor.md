@@ -13,7 +13,7 @@ Confirm the intended workspace and use only authorized data.
 
 ## Procedure
 
-Read orchestor-cli, orchestor-monitoring. Resolve the workspace, exact question, and requested settings. Check for an existing matching prompt before creating one. Create a draft unless the user explicitly requested monitoring or a run. Preserve unrelated settings. Read back the prompt and return its ID and state. Use orchestor-monitoring only for an explicitly requested measurement.
+Read orchestor-cli, orchestor-prompts. Resolve the workspace, exact question, and requested settings. Check for an existing matching prompt before creating one. Create a draft unless the user explicitly requested monitoring or a run. Preserve unrelated settings. Read back the prompt and return its ID and state. Use orchestor-prompts only for an explicitly requested measurement.
 
 ## Return
 

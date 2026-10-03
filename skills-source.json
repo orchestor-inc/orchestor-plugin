@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/orchestor-inc/skills.git",
-  "commit": "df98e77ce1add6a3f855332110d9dcfae9901f73",
+  "commit": "ac38f1b8d58df3fdeaa0b38d8143ea8437c93363",
   "skills": {
     "orchestor": {
       "SKILL.md": "0e64b9e940f16b69938c6a6f46b1fd5ad0c3baad2c4cf8cc643dadb2029be1fb",
@@ -60,7 +60,7 @@
       "references/batches.md": "d611697bc574b3e95c25f02ce25700087e345c170287fa6d1246ac58d754d9c9",
       "references/commands.md": "01c9f182b41c956bd91d9c7277e7fb46e046d69cfabab0ecb6664e6b86a3ea30",
       "references/measurement-configuration.md": "6810b698987be3bf05dcd5a6b121cd7481b43b4b1f0822fbe6323af95e8280d8",
-      "references/onboarding.md": "7e65b906377bd9060954198c6ff288abc440b2f6458c6078d2fcd5bd411e7f3e",
+      "references/onboarding.md": "e222fa0856e6b18f041ea1f38f77db4051a712f0951c587274dedda2ae4014ef",
       "references/prompts-personas.md": "c0dff7f1c4904ce39952264ed4f7e09961fa1d062a3268f271329d50213f6d2b",
       "references/run-lifecycle.md": "f8a372e713eeb27bf4c856d9da6bafc04e237413140f1729ea30e31570e9b77b"
     },

@@ -2,6 +2,8 @@
 description: Compare brand visibility and citations for a consistent scope.
 ---
 
+English | [日本語](../docs/ja/commands/visibility.md)
+
 # Compare visibility
 
 User request: $ARGUMENTS

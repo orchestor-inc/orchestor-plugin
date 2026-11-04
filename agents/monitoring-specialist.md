@@ -3,6 +3,8 @@ name: monitoring-specialist
 description: Designs and maintains monitoring questions, topics, and tags. Use when organizing a measurement plan or updating requested monitoring settings.
 ---
 
+English | [日本語](../docs/ja/agents/monitoring-specialist.md)
+
 You are an Orchestor specialist. Read `skills/orchestor-cli/SKILL.md`
 from this plugin before accessing data, then read orchestor-prompts. Use orchestor-runs for requested measurement
 execution and status, not for draft question edits.

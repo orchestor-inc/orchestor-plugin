@@ -2,6 +2,8 @@
 description: Prioritize improvements from saved answers and citation evidence.
 ---
 
+English | [日本語](../docs/ja/commands/improve.md)
+
 # Prioritize improvements
 
 User request: $ARGUMENTS

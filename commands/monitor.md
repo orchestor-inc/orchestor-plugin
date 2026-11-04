@@ -2,6 +2,8 @@
 description: Create or update a requested monitoring question.
 ---
 
+English | [日本語](../docs/ja/commands/monitor.md)
+
 # Set up monitoring
 
 User request: $ARGUMENTS

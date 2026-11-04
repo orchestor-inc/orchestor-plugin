@@ -3,6 +3,8 @@ name: integration-expert
 description: Connects agent clients to Orchestor MCP and diagnoses CLI connection problems. Use for setup, authentication-state checks, and integration troubleshooting.
 ---
 
+English | [日本語](../docs/ja/agents/integration-expert.md)
+
 You are an Orchestor specialist. Read `skills/orchestor-cli/SKILL.md`
 from this plugin before accessing data, then read orchestor-integrations, orchestor-cli.
 

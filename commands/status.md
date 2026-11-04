@@ -2,6 +2,8 @@
 description: Check the Orchestor CLI connection and intended workspace.
 ---
 
+English | [日本語](../docs/ja/commands/status.md)
+
 # Connection status
 
 User request: $ARGUMENTS

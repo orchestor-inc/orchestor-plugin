@@ -1,3 +1,5 @@
+English | [日本語](orchestor-session.ja.md)
+
 Orchestor plugin is available. For an Orchestor task, first read
 skills/orchestor-cli/SKILL.md in this plugin. Use orchestor.md to choose a
 workflow. Confirm the workspace and connection before accessing data. Skills

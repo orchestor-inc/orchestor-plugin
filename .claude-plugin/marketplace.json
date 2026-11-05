@@ -12,7 +12,7 @@
         "url": "https://orchestor.io"
       },
       "repository": "https://github.com/orchestor-inc/orchestor-plugin",
-      "license": "UNLICENSED",
+      "license": "MIT",
       "keywords": [
         "orchestor",
         "ai-visibility",

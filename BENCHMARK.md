@@ -7,9 +7,8 @@ The directory layout and component roles follow the primary reference:
 | Vercel element | Orchestor element |
 | --- | --- |
 | Multi-tool plugin manifests | Same manifest directories |
-| Skills | 13 pinned Orchestor skills with 64 references |
-| Three specialist agents | Visibility, monitoring, and integration specialists |
-| Four commands | status, visibility, monitor, improve |
+| Skills | 4 pinned Orchestor skills, laid out after [higgsfield-ai/skills@2700040](https://github.com/higgsfield-ai/skills/tree/27000402070db19d958789d05b3b52b6f4718d7c) |
+| Specialist agents and commands | Not carried over. Like the Higgsfield plugin, this plugin ships skills only |
 | vercel.md and vercel-session.md | orchestor.md and orchestor-session.md |
 | Session-start injection | Packaged, thin Orchestor context |
 | MCP configuration | Hosted Orchestor MCP with OAuth |
@@ -32,11 +31,10 @@ https://code.claude.com/docs/en/hooks on 2026-10-03.
 
 English remains the default installed instruction set. Japanese uses `SKILL.ja.md`
 and `*.ja.md` supporting documents; these are not additional discoverable skills.
-Both languages retain the same commands, code, identifiers and authorization boundaries.
+Both languages retain the same code, identifiers and authorization boundaries.
 Japanese documents record the SHA-256 of their English source so changed source text
 requires a translation refresh. The plugin receives both languages through its existing
-commit-pinned, per-file hash sync. Native command and agent translations live under
-`docs/ja/` to avoid registering extra commands or agents.
+commit-pinned, per-file hash sync.
 
 Mechanisms used:
 

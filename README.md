@@ -4,8 +4,8 @@ English | [日本語](README.ja.md)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Generate images, video and speech with [Orchestor](https://www.orchestor.io), the
-AI creative platform, without leaving your coding agent. One install adds the
+Generate and edit images, video and audio with [Orchestor](https://www.orchestor.io),
+the AI creative platform, without leaving your coding agent. One install adds the
 Orchestor skills and the hosted MCP connection.
 
 ## Installation
@@ -53,7 +53,7 @@ Describe what you want:
 
 > Read this script aloud with a calm Japanese voice.
 
-The agent picks a model from the catalog, submits the job, waits for it and
+The agent picks the skill and a model from the catalog, submits the job, waits for it and
 returns the output. Each generation spends credits from the authorized workspace.
 
 ## What's inside
@@ -61,9 +61,8 @@ returns the output. Each generation spends credits from the authorized workspace
 | Component | Description |
 | --- | --- |
 | **MCP** | `.mcp.json` connects to `https://mcp.orchestor.io/mcp` over OAuth. The plugin contains no credentials. |
-| **Skills** | [orchestor-creative](skills/orchestor-creative/SKILL.md) for image, video and speech generation, plus Orchestor's earlier analysis skills, kept for existing workspaces. |
+| **Skills** | [`orchestor-generate`](skills/orchestor-generate/SKILL.md) (images and video), [`orchestor-video-edit`](skills/orchestor-video-edit/SKILL.md) (upscale, background removal, captions, reframe, lip sync), [`orchestor-audio`](skills/orchestor-audio/SKILL.md) (speech, voice change, transcription) and [`orchestor-product-photoshoot`](skills/orchestor-product-photoshoot/SKILL.md) (product images). |
 | **Session hook** | Adds a short pointer to the plugin's skills at session start. It reads only packaged files: no project scan, network call or credential access. |
-| **Commands and agents** | `/orchestor:status` checks the CLI connection and workspace. The remaining commands and agents belong to the earlier analysis workflows. |
 
 The skills also work with the `orc` CLI. Install it with
 `curl -fsSL https://orchestor.io/install | sh`; CLI and MCP sign-ins are separate.

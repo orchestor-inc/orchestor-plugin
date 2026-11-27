@@ -13,7 +13,7 @@ for (const dir of ['.claude-plugin', '.cursor-plugin', '.plugin', '.kimi-plugin'
   assert.equal(manifest.repository, 'https://github.com/orchestor-inc/orchestor-plugin');
 }
 const manifest = json('.claude-plugin/plugin.json');
-for (const path of [...manifest.commands, ...manifest.agents]) {
+for (const path of [...(manifest.commands ?? []), ...(manifest.agents ?? [])]) {
   assert.ok(existsSync(resolve(root, path)), `Missing component: ${path}`);
 }
 const market = json('.claude-plugin/marketplace.json');

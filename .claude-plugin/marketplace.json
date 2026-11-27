@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "orchestor",
-      "description": "Generate images, video and speech with Orchestor, the AI creative platform, from your coding agent.",
+      "description": "Image, video and audio generation, video editing and product photography via Orchestor, the AI creative platform, with the hosted MCP server.",
       "author": {
         "name": "Orchestor",
         "url": "https://orchestor.io"
@@ -17,7 +17,9 @@
         "orchestor",
         "image-generation",
         "video-generation",
+        "video-editing",
         "text-to-speech",
+        "product-photography",
         "generative-ai",
         "mcp"
       ],
@@ -25,6 +27,6 @@
     }
   ],
   "metadata": {
-    "description": "Orchestor plugin for generating images, video and speech from coding agents."
+    "description": "Orchestor skills and MCP for image, video and audio generation from coding agents."
   }
 }

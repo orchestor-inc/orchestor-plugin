@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-AI クリエイティブプラットフォーム [Orchestor](https://www.orchestor.io)（オーケスター）で、コーディングエージェントから離れずに画像・動画・音声を生成できます。1 回のインストールで、Orchestor のスキルとホスト型 MCP 接続が追加されます。
+AI クリエイティブプラットフォーム [Orchestor](https://www.orchestor.io)（オーケスター）で、コーディングエージェントから離れずに画像・動画・音声を生成・編集できます。1 回のインストールで、Orchestor のスキルとホスト型 MCP 接続が追加されます。
 
 ## インストール
 
@@ -50,16 +50,15 @@ claude plugin install orchestor@orchestor
 
 > この原稿を落ち着いた日本語の声で読み上げて。
 
-エージェントはカタログからモデルを選び、ジョブを送信して完了を待ち、成果物を返します。生成には、許可したワークスペースのクレジットを消費します。
+エージェントはスキルとカタログのモデルを選び、ジョブを送信して完了を待ち、成果物を返します。生成には、許可したワークスペースのクレジットを消費します。
 
 ## 含まれるもの
 
 | コンポーネント | 内容 |
 | --- | --- |
 | **MCP** | `.mcp.json` が OAuth で `https://mcp.orchestor.io/mcp` に接続します。プラグインに資格情報は含まれません。 |
-| **スキル** | 画像・動画・音声の生成を扱う [orchestor-creative](skills/orchestor-creative/SKILL.ja.md) と、既存のワークスペース向けに残している以前の分析スキル。 |
+| **スキル** | [`orchestor-generate`](skills/orchestor-generate/SKILL.ja.md)（画像と動画）、[`orchestor-video-edit`](skills/orchestor-video-edit/SKILL.ja.md)（アップスケール、背景削除、字幕、リフレーム、リップシンク）、[`orchestor-audio`](skills/orchestor-audio/SKILL.ja.md)（音声合成、ボイスチェンジ、文字起こし）、[`orchestor-product-photoshoot`](skills/orchestor-product-photoshoot/SKILL.ja.md)（商品画像）。 |
 | **セッションフック** | セッション開始時に、プラグインのスキルへの短い案内を追加します。読むのは同梱ファイルだけで、プロジェクトの走査、ネットワーク通信、資格情報へのアクセスは行いません。 |
-| **コマンドとエージェント** | `/orchestor:status` は CLI の接続とワークスペースを確認します。ほかのコマンドとエージェントは以前の分析ワークフロー用です。 |
 
 スキルは `orc` CLI でも動きます。`curl -fsSL https://orchestor.io/install | sh` でインストールしてください。CLI と MCP のログインは別々です。
 
@@ -100,4 +99,4 @@ claude plugin validate .claude-plugin/marketplace.json
 
 [MIT](LICENSE)。
 
-<!-- translation-source-sha256: 6d44f131fa4f3554d0ab8d66a631ac6692db29729a06a2068015478c929c4b42 -->
+<!-- translation-source-sha256: 57bbf03ded22df0b81894e59ba4d03580f61d55f8cedfe647b33f22ce9d7ab2a -->

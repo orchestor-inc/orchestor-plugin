@@ -1,7 +1,7 @@
 {
   "name": "orchestor",
-  "version": "0.4.0",
-  "description": "Generate images, video and speech with Orchestor, the AI creative platform, from your coding agent.",
+  "version": "0.5.0",
+  "description": "Image, video and audio generation, video editing and product photography via Orchestor, the AI creative platform, with the hosted MCP server.",
   "author": {
     "name": "Orchestor",
     "url": "https://orchestor.io"
@@ -12,7 +12,9 @@
     "orchestor",
     "image-generation",
     "video-generation",
+    "video-editing",
     "text-to-speech",
+    "product-photography",
     "generative-ai",
     "mcp"
   ]

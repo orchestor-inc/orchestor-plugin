@@ -1,7 +1,7 @@
 {
   "name": "orchestor",
-  "version": "0.3.2",
-  "description": "Investigate AI visibility, monitor brands, and turn citation evidence into improvements.",
+  "version": "0.4.0",
+  "description": "Generate images, video and speech with Orchestor, the AI creative platform, from your coding agent.",
   "author": {
     "name": "Orchestor",
     "url": "https://orchestor.io"
@@ -10,10 +10,10 @@
   "license": "MIT",
   "keywords": [
     "orchestor",
-    "ai-visibility",
-    "aeo",
-    "geo",
-    "brand-monitoring",
+    "image-generation",
+    "video-generation",
+    "text-to-speech",
+    "generative-ai",
     "mcp"
   ]
 }

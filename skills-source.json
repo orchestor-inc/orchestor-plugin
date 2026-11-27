@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/orchestor-inc/skills.git",
-  "commit": "54d8e366e4aea14be4b5e645bc021a5215b06147",
+  "commit": "af3fb997026136a0e015588a68b5d98daaff4db0",
   "skills": {
     "orchestor": {
       "LICENSE": "2863566449234e0f67a47b8ed1532aa77e206e611fe6c9ea6b370b41d240b080",
@@ -92,6 +92,11 @@
       "references/output-pagination.md": "c0c85b97022e763aabf19df80b014b79a9947129da239418d41e11954257b869",
       "references/safe-changes.ja.md": "48b917cdd3d9582c08642e14ec7b4cc2e27a4431c5e8e65dde8a0d979e668288",
       "references/safe-changes.md": "90b038cfa1327b565a7be6700b5ec0e9019d4f12a41880c5a35c2a7176f62196"
+    },
+    "orchestor-creative": {
+      "LICENSE": "2863566449234e0f67a47b8ed1532aa77e206e611fe6c9ea6b370b41d240b080",
+      "SKILL.ja.md": "2b4ab0cb8339e16d96e068a206b4035beb86080843dc8f75b2f7a30f95dcd8e1",
+      "SKILL.md": "c46d2124946f6cd680409c6a2f53655a44932f2d4a4c0da7595254feb2530e27"
     },
     "orchestor-integrations": {
       "LICENSE": "2863566449234e0f67a47b8ed1532aa77e206e611fe6c9ea6b370b41d240b080",

@@ -2,8 +2,20 @@ English | [日本語](orchestor.ja.md)
 
 # Orchestor ecosystem
 
-Orchestor connects monitoring questions to saved AI answers, brand visibility,
-source citations, and improvement tasks inside a workspace.
+Orchestor is an AI creative platform. It generates images, video and speech as
+asynchronous jobs in a workspace.
+
+## Create images, video and speech
+
+Read [orchestor-creative](skills/orchestor-creative/SKILL.md). It picks a model
+from the catalog, submits a job through the CLI (`orc creative`) or the MCP tools,
+waits for it and returns the output URL.
+
+## Earlier analysis workspace
+
+The rest of this guide covers Orchestor's earlier analysis commands, kept for
+existing workspaces. A workspace connects monitoring questions to saved answers,
+source citations, and improvement tasks.
 
 ## Relationships
 

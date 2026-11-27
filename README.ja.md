@@ -1,143 +1,75 @@
 [English](README.md) | 日本語
 
-# orchestor-plugin
+# Orchestor Plugin
 
-## はじめに
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-AI 可視性の調査、ブランドのモニタリング、および引用エビデンスに基づく改善を行うための Orchestor ワークフロー。
+AI クリエイティブプラットフォーム [Orchestor](https://www.orchestor.io)（オーケスター）で、コーディングエージェントから離れずに画像・動画・音声を生成できます。1 回のインストールで、Orchestor のスキルとホスト型 MCP 接続が追加されます。
 
-### サポートされているツール
-
-| ツール | 配布状況 |
-| --- | --- |
-| Claude Code | マニフェストの検証およびプラグインのインストールを確認済み |
-| OpenAI Codex | プラグインインストーラーの登録を確認済み。認証済みランタイムは未テスト |
-| Cursor | マニフェスト同梱。ランタイムは未テスト |
-| GitHub Copilot CLI | 汎用プラグインマニフェスト同梱。ランタイムは未テスト |
-| Grok Build | 汎用プラグインマニフェスト同梱。ランタイムは未テスト |
-| Kimi Code | マニフェスト同梱。ランタイムは未テスト |
-
-### 前提条件
-
-- 上記に記載されているエージェントクライアント。
-- インストールおよびセッションフック用の Node.js 24+。
-- 同梱されているタスクワークフロー用の Orchestor ワークスペースおよび認証済み CLI。
-
-### インストール
+## インストール
 
 ```bash
 npx plugins add orchestor-inc/orchestor-plugin
 ```
 
-プロンプトが表示されたらエージェントを選択します。Claude Code を明示的に対象とする場合:
+表示される一覧からエージェントを選びます。Claude Code を明示する場合:
 
 ```bash
 npx plugins add orchestor-inc/orchestor-plugin --target claude-code
 ```
 
-または、Claude Code ネイティブのマーケットプレイスコマンドを使用します:
+Claude Code のマーケットプレイスコマンドも使えます。
 
 ```bash
 claude plugin marketplace add orchestor-inc/orchestor-plugin
 claude plugin install orchestor@orchestor
 ```
 
-エージェントを再起動します。Claude Code では、`/mcp` を開いて Orchestor を承認し、対象のワークスペースを選択します。CLI ワークフローについては、[CLI セットアップガイド](https://orchestor.io/docs/cli) に従い、その後 `orc status` を実行してください。
-MCP と CLI の認証は分かれています。インストールによってデータへのアクセス権が付与されることはありません。
+エージェントを再起動し、`/mcp` を開いて Orchestor にログインし、ワークスペースへのアクセスを許可します。インストールだけではアクセス権は付与されません。
 
-## 機能概要
+### 対応ツール
 
-本プラグインは、Orchestor のプロダクトコンテキスト、17 のリソースおよびワークフロースキル、3 つのスペシャリストエージェント、4 つのコマンド、セッション開始フック、およびホストされた MCP 接続を統合します。エージェントがワークフローを選択し、定義されたスコープのエビデンスを返すのを支援します。
+| ツール | 状況 |
+| --- | --- |
+| Claude Code | マニフェストの検証とプラグインのインストールを確認済み |
+| OpenAI Codex | プラグインインストーラーへの登録を確認済み。認証後の動作は未検証 |
+| Cursor | マニフェストを同梱。動作は未検証 |
+| GitHub Copilot CLI | 汎用プラグインマニフェストを同梱。動作は未検証 |
+| Grok Build | 汎用プラグインマニフェストを同梱。動作は未検証 |
+| Kimi Code | マニフェストを同梱。動作は未検証 |
+
+インストールとセッションフックには Node.js 24 以上が必要です。
 
 ## 使い方
 
-期待する結果を説明します。例:
+作りたいものを伝えます。
 
-- 「過去 30 日間の当社の可視性をこれらの競合他社と比較して。」
-- 「競合他社が引用されていて、当社が引用されていない質問を見つけて。」
-- 「この質問を下書きとして追加して。測定はまだ実行しないで。」
+> gpt-image-2 で、コンクリートの床に置いた白いスニーカーの商品写真を作って。
 
-エージェントはワークスペースを確認し、関連するスキルを読み込み、利用可能な接続を使用します。書き込みやクレジットを消費する測定は、お客様のリクエストに従って行われます。
+> seedance-2.5 で夜明けの波の動画を 5 秒作って、URL を教えて。
 
-## コンポーネント
+> この原稿を落ち着いた日本語の声で読み上げて。
 
-### エコシステムグラフ (`orchestor.md`)
+エージェントはカタログからモデルを選び、ジョブを送信して完了を待ち、成果物を返します。生成には、許可したワークスペースのクレジットを消費します。
 
-ワークスペース、ブランド、プロンプト、回答、レポート、ドメイン、および Issues を結び付けるコンパクトなガイドです。決定表により、目標がタスクスキルに対応付けられます。
+## 含まれるもの
 
-### スキル
-
-| スキル | 説明 |
+| コンポーネント | 内容 |
 | --- | --- |
-| [orchestor](skills/orchestor/SKILL.ja.md) | Orchestor ワークフローの選択 |
-| [orchestor-aeo-best-practices](skills/orchestor-aeo-best-practices/SKILL.ja.md) | AEO 分析のベストプラクティス |
-| [orchestor-aeo-workflows](skills/orchestor-aeo-workflows/SKILL.ja.md) | エビデンスからアクションへとつなげる AEO ワークフローの実行 |
-| [orchestor-agentic-web](skills/orchestor-agentic-web/SKILL.ja.md) | エージェント向け Web サイトの評価 |
-| [orchestor-answers](skills/orchestor-answers/SKILL.ja.md) | 保存された回答の操作 |
-| [orchestor-brands](skills/orchestor-brands/SKILL.ja.md) | ブランドおよびドメインの操作 |
-| [orchestor-cli](skills/orchestor-cli/SKILL.ja.md) | Orchestor CLI の操作 |
-| [orchestor-integrations](skills/orchestor-integrations/SKILL.ja.md) | エージェントと外部サービスの接続 |
-| [orchestor-manage-issues](skills/orchestor-manage-issues/SKILL.ja.md) | Orchestor Issues の管理 |
-| [orchestor-perception](skills/orchestor-perception/SKILL.ja.md) | 帰属するブランド特性の分析 |
-| [orchestor-prompts](skills/orchestor-prompts/SKILL.ja.md) | プロンプトとそのコンテキストの操作 |
-| [orchestor-reports](skills/orchestor-reports/SKILL.ja.md) | 集計レポートの操作 |
-| [orchestor-research](skills/orchestor-research/SKILL.ja.md) | Orchestor を使用した公開ソースの調査 |
-| [orchestor-runs](skills/orchestor-runs/SKILL.ja.md) | 測定実行の操作 |
-| [orchestor-shopping](skills/orchestor-shopping/SKILL.ja.md) | 製品および AI ショッピングエビデンスの分析 |
-| [orchestor-sources](skills/orchestor-sources/SKILL.ja.md) | ソースおよび引用の操作 |
-| [orchestor-workspace](skills/orchestor-workspace/SKILL.ja.md) | Orchestor ワークスペースの整理 |
+| **MCP** | `.mcp.json` が OAuth で `https://mcp.orchestor.io/mcp` に接続します。プラグインに資格情報は含まれません。 |
+| **スキル** | 画像・動画・音声の生成を扱う [orchestor-creative](skills/orchestor-creative/SKILL.ja.md) と、既存のワークスペース向けに残している以前の分析スキル。 |
+| **セッションフック** | セッション開始時に、プラグインのスキルへの短い案内を追加します。読むのは同梱ファイルだけで、プロジェクトの走査、ネットワーク通信、資格情報へのアクセスは行いません。 |
+| **コマンドとエージェント** | `/orchestor:status` は CLI の接続とワークスペースを確認します。ほかのコマンドとエージェントは以前の分析ワークフロー用です。 |
 
-### エージェント (3 つのスペシャリスト)
+スキルは `orc` CLI でも動きます。`curl -fsSL https://orchestor.io/install | sh` でインストールしてください。CLI と MCP のログインは別々です。
 
-| エージェント | 専門分野 |
-| --- | --- |
-| `visibility-analyst` | 競合比較、引用、およびエビデンスに裏付けられた推奨事項 |
-| `monitoring-specialist` | モニタリングの質問、トピック、タグ、および測定スコープ |
-| `integration-expert` | MCP のセットアップおよび CLI 接続のトラブルシューティング |
+## テレメトリー
 
-### コマンド (4 つのコマンド)
+このプラグインはテレメトリーを送信しません。CLI や MCP を通じた Orchestor への呼び出しは製品へのリクエストであり、通常の認証に従います。
 
-| コマンド | 目的 |
-| --- | --- |
-| `/orchestor:status` | CLI 接続および対象のワークスペースを確認する |
-| `/orchestor:visibility` | 可視性を比較し、裏付けとなる回答を調査する |
-| `/orchestor:monitor` | 要求されたモニタリング質問を作成または更新する |
-| `/orchestor:improve` | エビデンスに基づいて改善事項の優先順位を付ける |
+## スキルの取得元
 
-### フック
-
-SessionStart フックは、プラグインの場所、共有ルール、およびワークフローのエントリポイントを含む短い導入文を追加します。パッケージ化されたコンテキストのみを読み取り、プロジェクトのスキャン、ネットワークの呼び出し、認証情報へのアクセスは行いません。フックの可用性とコマンド構文はクライアントに依存します。JSON 出力コントラクトは Claude Code でテストされています。
-
-### MCP
-
-`.mcp.json` および `mcp.json` は `https://mcp.orchestor.io/mcp` を指しています。
-クライアントの OAuth フローを使用してください。本プラグインには認証情報は含まれていません。
-
-## 使用方法
-
-Claude Code での使用:
-
-```text
-/orchestor:status
-/orchestor:visibility Compare our brand with competitors for the last 30 days
-/orchestor:monitor Add this question as a draft
-```
-
-クライアントが名前空間付きコマンドではなくスキルを公開している場合は、対応するスキルを直接使用してください。クライアントのセットアップについては https://orchestor.io/docs/agent-setup を確認してください。
-
-## テレメトリ
-
-本プラグインはテレメトリを送信しません。CLI または MCP を介した Orchestor への呼び出しは製品リクエストであり、サービスの通常の認証および動作に従います。
-
-## スキルの作成と改善
-
-skills.sh を介して編集可能なスキルファイルを利用する場合は、[Skills リポジトリ](https://github.com/orchestor-inc/skills) を使用してください。重複を避けるため、同一スキルに対しては 1 つのインストール経路を選択してください。その構成例およびアップストリームの skill-creator ガイダンスに従ってください。プラグインの更新にはネイティブクライアントを使用します。Claude Code では `claude plugin update orchestor@orchestor` を実行してください。
-
-## アップストリームスキルの同期
-
-スキルは `skills-source.json` のコミット時点の [orchestor-inc/skills](https://github.com/orchestor-inc/skills) から取得されています。SHA-256 ハッシュにより、インポートされた正確なエントリポイントと参照が保持されます。プラグインのコマンド、エージェント、コンテキスト、およびフックは本リポジトリに存在します。
-
-インポートを再現するには:
+スキルは [orchestor-inc/skills](https://github.com/orchestor-inc/skills) から、`skills-source.json` に固定したコミットで取り込み、SHA-256 で検証しています。ここで `skills/` を編集しないでください。新しいバージョンを取り込むときは、固定値を更新して次を実行します。
 
 ```bash
 pnpm sync:skills
@@ -145,7 +77,7 @@ pnpm validate
 pnpm test
 ```
 
-新しいスキルバージョンを採用する場合は、コミットとハッシュを慎重に更新してください。ここでインポートされた `skills/` ファイルを直接編集しないでください。
+プラグインを使わずにスキルだけを入れる場合は、[skills リポジトリ](https://github.com/orchestor-inc/skills)を使います。同じスキルを二重にインストールしないよう、どちらか一方を選んでください。
 
 ## 開発
 
@@ -156,10 +88,16 @@ claude plugin validate .claude-plugin/plugin.json
 claude plugin validate .claude-plugin/marketplace.json
 ```
 
-依存関係のインストールやビルドステップは不要です。ランタイムファイルは直接コミットされています。[BENCHMARK.md](BENCHMARK.md) には、固定された Vercel のリファレンスと Orchestor に適応されたコンポーネントが記録されています。
+ビルドは不要です。[BENCHMARK.md](BENCHMARK.md) に、参照した Vercel プラグインの固定バージョンを記録しています。
+
+## ドキュメント
+
+- [MCP のセットアップ](https://www.orchestor.io/docs/mcp)
+- [CLI リファレンス](https://www.orchestor.io/docs/cli)
+- [モデル](https://www.orchestor.io/docs/models)
 
 ## ライセンス
 
 [MIT](LICENSE)。
 
-<!-- translation-source-sha256: 455f38b818da44e60f67992dfefa7fa038113d203f077821e13ccd423e8bb4b1 -->
+<!-- translation-source-sha256: 6d44f131fa4f3554d0ab8d66a631ac6692db29729a06a2068015478c929c4b42 -->
